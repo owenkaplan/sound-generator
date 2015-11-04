@@ -31,15 +31,11 @@ def isNumeric(choice):
     except:
         return False
 
-
 pygame.mixer.init()
 sounds = []
-
 choice = getNumTracks()
 
-
 n = 0
-
 while n < choice:
     indexToGet = 0
     if len(oggFiles) > 1:
@@ -50,13 +46,19 @@ while n < choice:
     sounds.append(pygame.mixer.Sound(py_play))
     n += 1
 
-print sounds
-
 numPlay = 0
 while numPlay < len(sounds):
     sounds[numPlay].play()
-    print numPlay
     numPlay += 1
+
+
+
+
+
+
+
+
+
 
 
 while True:
