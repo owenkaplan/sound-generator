@@ -2,12 +2,15 @@ import os
 import pygame, sys
 from pygame.locals import *
 
+pygame.init()
+files = open("/Users/Baxter/Desktop/test.ogg")
+
 # set window size
 width = 246
 height = 49
 
 # initilaise pygame
-pygame.init()
+
 windowSurfaceObj = pygame.display.set_mode((width,height),1,16)
 redColor = pygame.Color(100,0,0)
 blackColor = pygame.Color(0,0,0)
@@ -31,9 +34,7 @@ while s == 0:
        #pygame.display.update(pygame.Rect(0,0,width,height))
        pygame.draw.rect(windowSurfaceObj,redColor,Rect(a,2.5,10,45))
        pygame.display.update(pygame.Rect(0,0,width,height))
-
        print a
-
 
    # check for ESC key pressed, or pygame window closed, to quit
     for event in pygame.event.get():
